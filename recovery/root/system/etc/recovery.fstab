@@ -14,7 +14,7 @@ odm                             /odm            ext4     ro,barrier=1,discard   
 /dev/block/platform/bootdevice/by-name/protect1   /vendor/protect_f ext4    noatime,nosuid,nodev,noauto_da_alloc,discard                               wait,check
 /dev/block/platform/bootdevice/by-name/protect2   /vendor/protect_s ext4    noatime,nosuid,nodev,noauto_da_alloc,discard                               wait,check
 /dev/block/platform/bootdevice/by-name/persist    /persist          ext4    noatime,nosuid,nodev,noauto_da_alloc,discard                               wait,check
-/dev/block/platform/bootdevice/by-name/userdata            /data             f2fs    defaults                                                                   length=-16384,fileencryption=aes-256-xts:aes-256-cts,reservedsize=20M
+/dev/block/platform/bootdevice/by-name/userdata   /data             f2fs    noatime,nosuid,nodev,discard,noflush_merge,reserve_root=134217,resgid=1065 wait,check,quota,reservedsize=128M,formattable,resize,checkpoint=fs,fileencryption=aes-256-xts                              
 
 /dev/block/mmcblk1p1	/external_sd	auto	defaults		flags=display="External SDcard";storage;wipeingui;removable;backup=0
 /dev/block/sda1		/usbotg		auto    defaults		flags=display="Usb-Otg";storage;removable;backup=0
